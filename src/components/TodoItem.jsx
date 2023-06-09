@@ -1,10 +1,12 @@
 import { useState, useRef } from 'react';
-import styles from '@/styles/TodoItem.module.css';
 
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
+import styles from '@/styles/TodoItem.module.css';
 
-const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+const TodoItem = ({
+  itemProp, handleChange, delTodo, setUpdate,
+}) => {
   const [editing, setEditing] = useState(false);
 
   const editInputRef = useRef(null);
@@ -20,8 +22,8 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
     setEditing(true);
   };
 
-  let viewMode = {};
-  let editMode = {};
+  const viewMode = {};
+  const editMode = {};
   if (editing) {
     viewMode.display = 'none';
   } else {

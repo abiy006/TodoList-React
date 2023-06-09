@@ -11,5 +11,5 @@ const root = ReactDOM.createRoot(domContainer);
 root.render(
   <React.StrictMode>
     <TodoApp />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
